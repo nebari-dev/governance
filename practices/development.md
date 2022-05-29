@@ -4,9 +4,9 @@ This section describes how our development team carries out its planning and day
 
 - [Development and backlog workflow](#development-and-backlog-workflow)
   - [:running_woman: Team Sprints](#running_woman-team-sprints)
-    - [:recycle: Sprint cadence](#recycle-sprint-cadence)
-    - [:pencil: Sprint planning meeting](#pencil-sprint-planning-meeting)
-    - [The  `🏃🏻 - Sprint board`](#the-----sprint-board)
+    - [Sprint cadence](#sprint-cadence)
+    - [Sprint planning meeting](#sprint-planning-meeting)
+    - [The `🏃🏻 - Sprint board`](#the----sprint-board)
   - [:package: Deliverables and work issues](#package-deliverables-and-work-issues)
     - [How are deliverables structured?](#how-are-deliverables-structured)
   - [:card_file_box: The Team Backlog](#card_file_box-the-team-backlog)
@@ -32,35 +32,33 @@ To begin each sprint, we collectively choose items to work on in the next sprint
 Each item should have a person assigned to it, who will be responsible for ensuring that the work gets done.
 However, our work within a sprint is a **team commitment**, and we are all responsible for helping one another accomplish our tasks.
 
-### :recycle: Sprint cadence
+### Sprint cadence
 
 Our team works in **two-week sprints**.
 Here is a brief overview of each sprint.
 
-<!-- TODO: Define day -->
-1. **Wednesday (beginning of sprint)**
+1. **Tuesday (beginning of sprint)**
    - All the sprints begins with a sprint planning meeting.
    - In this meeting we discuss major accomplishments in the previous sprint. We then prioritize and assign the items that each team member will work on for the next sprint, and review items that require discussion and planning.
 
 2. **During the sprint**
    - Team members work on the items assigned to them at the sprint planning meeting.
-   - We use [🏃🏻 - Sprint board][sprint-board] to coordinate our activities during the sprint.
+   - We use the [🏃🏻 - Sprint board][sprint-board] to coordinate our activities during the sprint.
    - We provide updates about what we've been up to, what we're doing next, and where we need help via regular **team progress meetings**.
 
-<!-- TODO: Define day -->
-1. **Tuesday of week 2 (end of sprint)**
+3. **Monday of week 2 (end of sprint)**
    - By the end of the day, team members should have completed all of their items for that sprint.
-  
-### :pencil: Sprint planning meeting
+
+### Sprint planning meeting
 
 - The team conducts a Sprint Planning meeting for 60 minutes at the beginning of each sprint.
 - The goal of this meeting is to review our major work items, synchronize with one another, and prioritize work across team members.
-- Our **Project Manager** role leads these meetings.
+- Our **Project Manager** leads these meetings.
 
 <!-- TODO: add template -->
-See [the Sprint Planning issue template](***) for the agenda / structure of these meetings.
+:link: See [the Sprint Planning issue template](***) for the agenda / structure of these meetings.
 
-### The  `🏃🏻 - Sprint board`
+### The `🏃🏻 - Sprint board`
 
 The [`🏃🏻 - Sprint board`][sprint-board] is a place to keep track of the tasks and other deliverables our team intends to work on for the sprint.
 The team's goal is to complete all items on the Sprint Board by the end of the Sprint.
@@ -73,6 +71,20 @@ This is a team commitment - while one person may be assigned to a deliverable, w
 - Under-estimate our team's total capacity, to provide room for unexpected work (e.g., support work) and time off
 - Have a team member assigned to each item on the board
 
+The Sprint Board is broken down into these columns:
+
+- `Todo - ready to work 📬` items that are ready to be worked on.
+- `In progress 🏗` an item that a team member is currently working towards.
+- `PR opened 📥` items that have a PR opened and are waiting for review.
+- `In review/QA 👀` items that are being reviewed by a team member.
+- `Done 💪🏾` items that have been completed. These should be celebrated archived in the next Sprint Planning meeting.
+
+> **Note**
+> 👉🏽 [Here is a status view of the items in this sprint](https://github.com/orgs/nebari-dev/projects/4/views/4)
+> 👉🏽 [If you prefer a Kanban view you can check it here](https://github.com/orgs/nebari-dev/projects/4/views/7)
+
+In addition, we have a few other pieces of metadata to signal different kind of actions that would be needed
+
 ## :package: Deliverables and work issues
 
 Deliverables represent incremental amounts of value we can deliver to a particular stakeholder.
@@ -81,7 +93,7 @@ Most issues in our repositories are deliverables, in varying states of readiness
 
 > **Note**
 > We use the word "deliverable" loosely here - some issues may be more like tasks rather than an end-product.
-> The important thing is that they have high-quality information and structure, clearly denote value, and are actionable.
+> The important thing is that they have high-quality information and structure, highlight the value of such item, and are actionable.
 
 ### How are deliverables structured?
 
@@ -115,7 +127,7 @@ Below are some major sections that are common:
 
 :link: - [Click here to go to the Team Backlog][backlog-board].
 
-The Team Backlog is a GitHub Projects Board with a list of Deliverables and tasks across all of our active projects.
+The Team Backlog is a GitHub Projects Board with a list of Deliverables and tasks across all of our active projects and repositories.
 This represents the work that the team is planning to do in the near future.
 These items adhere to the following principles:
 
@@ -129,7 +141,8 @@ Only assign a backlog issue to somebody if it is **actively being worked on**.
 We assume that once somebody is assigned to an issue, it is part of an active sprint.
 Note that **all** issues on our Sprint Backlog should have somebody assigned to them.
 
-> **Note** Our definition of "Work in Progress"
+> **Warning**
+> **Our definition of "Work in Progress"**
 > Because issues that are actively being worked on must have somebody assigned to them, we use "the issues that have somebody assigned to them" as our definition of Work in Progress.
 
 ### Backlog item limits
@@ -140,39 +153,42 @@ We **should not have more backlog items than this amount**.
 You can estimate the number of items on the board at any one time by assuming that **each team member (at 100% FTE) can accomplish about 2 items per sprint**.
 You can then calculate the rough number of items on this board with the equation:
 
-```
-n_team_members * 2 (items per sprint) * 3 (sprints on the board)
+```mathjax
+$$ n_team_members * 2 (items per sprint) * 3 (sprints on the board) $$
 ```
 
-So if we have 5.5 team members available (if one of them is at 50% FTE), then the team backlog should have around `5.5 * 2 * 3 = 33 deliverables` on it.
+So if we have `5.5` team members available (if one of them is at 50% FTE), then the team backlog should have around `$ 5.5 * 2 * 3 = 33 deliverables $` on it.
 
 ### Adding backlog items
 
 We should add items to our team backlog when we have capacity to do the work in the next 3 sprints, and when those items are ready to be prioritized over all the other work that we *could* do (e.g., all issues in our repositories and encoded in project backlogs).
 
-> **Tip**
-> It can be difficult to keep track of issues across all of our repositories, so using a Project Backlog can be helpful to track longer-term planning for a specific project.
+> **Note**
+> It can be difficult to keep track of issues across all of our repositories, so our [Sprint board][sprint-board] and [Backlog board][backlog-board] are the single source of truth for all the work.
+> There are larger projects such as [documentation][documentation-board] and [community growth][community-board] that have their own boards. But the issues must also be added to the team backlog and sprint boards.
 
 To add an item to the backlog, take the following steps:
 
 1. Look at the team backlog to make sure that it has capacity to absorb a new item.
 1. If it does not have capacity
-   1. Consider adding it to a [Project Backlog](coordination:project-backlog) or leave it in the issues of a repository.
+   1. Consider adding it to a Project Backlog(i.e. documentation or community growth) or leave it in the issues of a repository.
     We can always get to it later.
    2. Choose whether you wish to **remove** an item from the backlog in order to make space.
     Use your best judgment about whether this is the right thing to do, depending on the priority of the backlog items that are already on there.
-1. Place the new backlog item in the appropriate location, according to its perceived importance and urgency.
+1. Place the new backlog item in the appropriate location, according to its perceived importance and urgency. To add the issue to the [Backlog board][backlog-board] click on the `Projects` tab in the GitHub UI and select the [🗃 - Nebari backlog board][backlog-board].
+
+![Adding items to Nebari backlog organization board](../assets/Nebari_add_item_project.png)
 
 ### How to prioritize backlog items
 
 It can be difficult to prioritize backlog items, and is ultimately a subjective decision.
 These criteria can be used to help guide your actions:
 
-- **Impact**: How impactful will it be to resolve this item?
+1. **Impact**: How impactful will it be to resolve this item?
   Will it affect many users or be particularly useful?
-- **Urgency**: How important is it that we resolve this item quickly?
+1. **Urgency**: How important is it that we resolve this item quickly?
   If it is lower impact, but urgent to accomplish, we may nonetheless wish to prioritize it.
-- **Effort**: How many moving pieces does this item have and how much deep thinking will it take to resolve?
+1. **Effort**: How many moving pieces does this item have and how much deep thinking will it take to resolve?
 
 All else being equal, we should prioritize backlog items that are easier or faster to accomplish since this will be more bang for our buck.
 This is very subjective, so is probably best-estimated when there's a candidate person to work on an item.
@@ -194,7 +210,6 @@ In this case, there are two options:
 > You can [use GitHub's task issue tracking features](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-task-lists) to keep track of tasks associated with an issue.
 
 As work is done towards a backlog item, **update the top comment of the issue** with new information and tasks.
-Each parent issue is the {term}`Source of Truth` for all work associated with it (instead of, for example, an issue created as a sub-task for that item).
 
 ### Tracking upstream issues
 
@@ -229,7 +244,7 @@ See the section below for details.
   If there is at least one approval on a PR, then anybody, including the PR author, may merge the PR.
   PR authors should not hesitate to merge their own PR after an approval if they think it is ready to go!
 - **Merging without review is discouraged, but not forbidden**.
-  For changes that are minor, very straightforward, and do not affect actively-running infrastructure, it is acceptable to self-merge a PR without getting an approval.  
+  For changes that are minor, very straightforward, and do not affect actively-running infrastructure, it is acceptable to self-merge a PR without getting an approval.
   If you don't believe that your PR requires an approval before merging, make it clear in your PR or in a comment that you plan to merge it in 24 hours.
 - **Leave PRs open for at least 24 working hours**.
   This helps ensure that others on the team have a chance to look at the PR and give their thoughts (by working hours we mean hours during a weekday).
@@ -238,7 +253,8 @@ See the section below for details.
 
 Changing active infrastructure is a bit different from developing technology that is not immediately in production.
 As such, we follow some more specific guidelines for these kinds of changes.
-See {ref}`infra:infrastructure:review`.
+
+:link: See [Changing active infrastructure](active-infra.md) for more details.
 
 ### Policy for team compass changes
 
@@ -261,6 +277,8 @@ This is a GitHub Issue whose job is to keep track of many actions and deliverabl
 They are generally encoded as **Task Lists** in the issue's top comment.
 Each item in the list tends to be a deliverable, and can be converted into its own GitHub Issue (e.g., to put on the [Sprint Board][sprint-board]) as-needed.
 
+Each Meta issue is the `Source of Truth` for all work associated with it (instead of, for example, an issue created as a sub-task for that item).
+
 ### Project Backlogs
 
 For more complex efforts, it can be useful to create a Project Backlog.
@@ -268,12 +286,14 @@ These are GitHub Projects boards that contain all the deliverables that will com
 These are often organized into a few columns, representing the **status** of each deliverable.
 Here is a common column structure:
 
-- {guilabel}`Needs Discussion/Refinement`: Deliverables that are high-priority but un-refined. Our goal should be having discussion and doing research in order to get these deliverables ready for work.
-- {guilabel}`Ready to Work`: Deliverables that are well-scoped and have a clear path forward, and are thus ready to implement. As deliverables in {guilabel}`In progress` are completed, we should replace them with deliverables from this column. Generally speaking, deliverables near the top have higher priority than those at the bottom.
-- {guilabel}`In progress`: Deliverables that we are currently working towards. This means that they should be added to the [Sprint Board](coordination:sprint-board) to track its completion.
-- {guilabel}`Blocked`: Deliverables that require another action or delivearable from the Nebari team to complete before they can move forward.
-- {guilabel}`Waiting`: Deliverables that require another action from a **non-Nebari team member** before they can move forward.
-- {guilabel}`Done`: Deliverables that have been completed. We should close these issues and celebrate the improvements that we have made!
+- `Needs Discussion/Refinement 🪨`: Deliverables that are high-priority but un-refined. Our goal should be having discussion and doing research in order to get these deliverables ready for work.
+- `Todo -ready to work 📬`: Deliverables that are well-scoped and have a clear path forward, and are thus ready to implement. As deliverables in `In progress` are completed, we should replace them with deliverables from this column. Generally speaking, deliverables near the top have higher priority than those at the bottom.
+- `In progress 🏗`: Deliverables that we are currently working towards. This means that they should be added to the [Sprint Board]([sprint-board]) to track its completion.
+- `In review 👀`:
+- `PR opened 📥`:
+- `Blocked ⛔️`: Deliverables that require another action or delivearable from the Nebari team to complete before they can move forward.
+- `Waiting ⏳`: Deliverables that require another action from a **non-Nebari team member** before they can move forward.
+- `Done 💪🏾`: Deliverables that have been completed. We should close these issues and celebrate the improvements that we have made!
 
 ## :mega: How we make decisions
 
@@ -293,9 +313,9 @@ See [Merging and reviewing policies](#eyes-merging-and-reviewing-policy) for how
 
 Here are some helpful resources for more information about consent-based decision-making.
 
-- A short primer: https://thedecider.app/consent-decision-making
-- A more in-depth discussion: https://sociocracyforall.org/consent-decision-making/
-- A well-known technical proposal on "Consent via humming": https://tools.ietf.org/html/rfc7282
+- A short primer: <https://thedecider.app/consent-decision-making>
+- A more in-depth discussion: <https://sociocracyforall.org/consent-decision-making/>
+- A well-known technical proposal on "Consent via humming": <https://tools.ietf.org/html/rfc7282>
 
 <!-- links -->
 [sprint-board]: https://github.com/orgs/nebari-dev/projects/4
