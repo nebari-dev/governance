@@ -2,24 +2,31 @@
 
 This section describes how Nebari team members share and access sensitive credentials that allow permissions on our infrastructure and services.
 
-## Where are secrets located?
+- [Secrets, credentials, and passwords](#secrets-credentials-and-passwords)
+  - [:closed_lock_with_key: Where are secrets located?](#closed_lock_with_key-where-are-secrets-located)
+  - [:key: `sops` overview](#key-sops-overview)
+    - [Set up `sops`](#set-up-sops)
+    - [Decrypt secrets with `sops`](#decrypt-secrets-with-sops)
+    - [Learn more about `sops`](#learn-more-about-sops)
+  
+## :closed_lock_with_key: Where are secrets located?
 
-**For more services**: Our team tries to use services that allow for multi-user authorization.
+- **For most services**: Our team tries to use services that allow for multi-user authorization.
 This means we try to use services where team members have their own account with permissions on the service, so no secrets need be shared (for example, GitHub organizations).
 
-**When we must share secrets**: If we must share secrets for an account (for example, credentails for deployment to cloud infrastructure), then we use [the command-line tool `sops`](https://github.com/mozilla/sops) to encrypt our secrets.
-See below for information about how to use `sops`.
+- **When we must share secrets**: If we must share secrets for an account (for example, credentials for deployment to cloud infrastructure), then we use [the command-line tool `sops`](https://github.com/mozilla/sops) to encrypt our secrets.
+See [below for information](#sops-overview) about how to use `sops`.
 
 We try to keep encrypted secrets files near their configuration files.
 For example, we'll keep a Kubernetes configuration file in the same folder as the secrets that are needed to make changes to that cluster.
-See [the Nebari GKE cluster folder](https://github.com/Nebari-org/infrastructure/tree/HEAD/config/clusters/Nebari) for an example.
+<!-- See [the Nebari GKE cluster folder](https://github.com/Nebari-org/infrastructure/tree/HEAD/config/clusters/Nebari) for an example. -->
 
-## `sops` overview
+## :key: `sops` overview
 
 [`sops`](https://github.com/mozilla/sops) is a command-line tool for encrypting and decrypting secrets that are on disk.
 It is similar to [`git-crypt`](https://github.com/AGWA/git-crypt) (which is what is used by the Binder SRE team), but gives a bit more visibility into the encrypted fields by only encrypting the *values* rather than the *keys*.
 
-Here's an example of a file that has been encrypted with `sops` (from [our `infrastructure` configuration](https://github.com/Nebari-org/infrastructure/blob/HEAD/config/clusters/Nebari/enc-grafana-token.secret.yaml)):
+Here's an example of a file that has been encrypted with `sops` (from [the 2i2c `infrastructure` configuration](https://github.com/Nebari-org/infrastructure/blob/HEAD/config/clusters/2i2c/enc-grafana-token.secret.yaml)):
 
 ```yaml
 grafana_token: ENC[AES256_GCM,data:o337Q5SSoBxk5bwSbbM12OO06LfLGsyWhh/SHccH4uOllMPSt4lN9EoRThfhDasrKaXyDmCNBdX+VBPrvBl1S61d7FG1Dfc/Cou3UODe99pZ53N1anooF5Oz38I=,iv:kai3CpHRtx1k9E5iZIcOOXFg0iElr7z+Q1+sZm6TNyI=,tag:1DfUibZUUIjaEMzpf0xkSw==,type:str]
@@ -38,7 +45,7 @@ sops:
   version: 3.6.1
 ```
 
-As you can see, we have access to the **key names** but the **values are encrypted**.
+As you can see, we have access to the **key names**, but the **values are encrypted**.
 Some information about which encryption key `sops` uses to encrypt/decrypt the secret is also stored under the top-level `sops` JSON key.
 In the next section we'll cover how to unencrypt this file.
 
@@ -46,22 +53,21 @@ In the next section we'll cover how to unencrypt this file.
 
 To use `sops` with a Nebari configuration file, follow these steps:
 
-1. **Set up `sops`**. To do so, [follow the `sops` download and install instructions here](https://github.com/mozilla/sops/#1download).
+1. **Set up `sops`**. To do so, [follow the `sops` download and install instructions in the sops download page](https://github.com/mozilla/sops/#1download).
 2. **Set up the Google Cloud SDK**. We use Google Cloud to provide the authentication for `sops`, and this is managed by the `gcloud` command-line tool.
    You will need access to the `two-eye-two-see` Google project in order to access the `sops` encryption keys.
    [Follow the Google Cloud instructions](https://cloud.google.com/sdk/docs/install) to do so.
 3. **Set up the Google Cloud Key Management Service (KMS)**. This allows you to use your Google Cloud login to provide authentication for `sops`.
    [Follow the `sops` instructions to use KMS](https://github.com/mozilla/sops/#encrypting-using-gcp-kms).
 
-   ```{note}
-   This step is only required when setting up `sops` for the first time.
-   ```
+> **Note**
+> This step is only required when setting up `sops` for the first time.
 
 To confirm that `sops` has been set up properly, try encrypting or decrypting a configuration file per the sections below.
 
 ### Decrypt secrets with `sops`
 
-In order to decrypt an encrypted configuration file, you should first follow the instructions in [](secrets:sops:setup).
+In order to decrypt an encrypted configuration file, you should first follow the instructions in [the set up sops section](#set-up-sops).
 Once you've completed those steps, do the following:
 
 1. **Navigate to the root of the repository**.
@@ -84,8 +90,6 @@ Once you've completed those steps, do the following:
 
    1. Identify when a file is encrypted or not, and
    2. Use `.gitignore` rules to assist us in not committing unencrypted secrets to the repository
-
-   See our [infrastructure docs](https://infrastructure.Nebari.org/en/latest/topic/secrets.html) for more information on this.
 
 ### Learn more about `sops`
 

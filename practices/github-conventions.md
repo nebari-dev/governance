@@ -1,6 +1,6 @@
 # GitHub repository conventions
 
-This page describes some common conventions and patterns that we follow in our GitHub repositories.
+This page describes some common conventions and patterns that we follow in all of our GitHub repositories within the `Nebari-dev` organisation.
 
 - [GitHub repository conventions](#github-repository-conventions)
   - [:label: Issue labels](#label-issue-labels)
@@ -29,8 +29,8 @@ Issue types are mutually-exclusive - **there may only be one issue type per issu
 
 There are a few issue types that are defined for all repositories, for example:
 
-* ![type: enhancement 💅🏼](https://img.shields.io/badge/-type:enhancement%20💅🏼-6C87D9.svg): an incremental improvement to something
-* ![type: bug 🐛](https://img.shields.io/badge/-type:bug%20🐛-6C87D9.svg): a problem that needs to be fixed
+* ![type: enhancement 💅🏼](https://img.shields.io/badge/-type:enhancement%20💅🏼-9D73D9.svg): an incremental improvement to something
+* ![type: bug 🐛](https://img.shields.io/badge/-type:bug%20🐛-9D73D9.svg): a problem that needs to be fixed
 
 In addition, other repositories may use repository-specific types, with the caveat that **all issues must still only have one `type` label**.
 
@@ -49,20 +49,22 @@ The impact should be proportional to a combination of:
 
 Here are the impact labels for our issues:
 
-- ![impact: high](https://img.shields.io/badge/-impact:%20high-6C87D9.svg)
-- ![impact: medium](https://img.shields.io/badge/-impact:%20medium-6C87D9.svg)
-- ![impact: low](https://img.shields.io/badge/-impact:%20low-6C87D9.svg)
+- ![impact: high](https://img.shields.io/badge/-impact:%20high-F2A29B.svg)
+- ![impact: medium](https://img.shields.io/badge/-impact:%20medium-F2A29B.svg)
+- ![impact: low](https://img.shields.io/badge/-impact:%20low-F2A29B.svg)
 
 #### Categorizing impact
 
 Here are a few guidelines for how to categorize impact across a few major types of issues.
 
 **Features / Enhancements**
+
 - `impact: high`: Will be seen and commonly used by nearly all users. Has been requested by an abnormally large number of users. Is of particular importance to a key community.
 - `impact: med`: Useful to many users but not an overwhelming amount. Will be a less-obvious improvement. Most issues should be in this category.
 - `impact: low`: Useful but not a critical part of workflows. Is a niche use-case that only a few users may need.
 
 **Bugs**
+
 - `impact: high`: Disruptive to nearly all users, or critically disruptive to many users or key communities (e.g., sessions won't work at all).
 - `impact: med`: Disruptive to some users, but not in a critical way. Only noticeable under circumstances that aren't very common. Most issues should be in this category.
 - `impact: low`: Minimally disruptive or cosmetic, or only affects a small number of users or niche use-cases.
@@ -78,16 +80,23 @@ Here are some example tags:
 
 * ![area: documentation 📖](https://img.shields.io/badge/-area:%20documentation%20📖-6FB7BF.svg): related to documentation in a repository
 * ![area: CI 👷🏽‍♀️](https://img.shields.io/badge/-area:%20ci%20👷🏽‍♀️-6FB7BF.svg): related to continuous integration/deployment
-* ![area: design 🎨](https://img.shields.io/badge/-area:%20design%20🎨-6FB7BF.svg): related to de sign items
+* ![area: design 🎨](https://img.shields.io/badge/-area:%20design%20🎨-6FB7BF.svg): related to design items including UX/UI and graphic design
 
 ## :book: Documentation
 
-All of our team documentation is built with the [Docusaurus documentation engine](https://www.sphinx-doc.org/en/master/).
-We use a [shared Docusaurus theme](https://github.com/nebari-dev/sphinx-2i2c-theme/blob/main/docs/index.md) across all of our repositories, in order to standardize the look and feel of our docs, and to ensure we have cross-references and navigation links across various documentation sites.
+All of our team documentation is built with the [Docusaurus documentation engine](https://docusaurus.io/).
+<!-- TODO: update with theme when done -->
+We use a [shared Docusaurus theme](***) across all of our repositories, in order to standardize the look and feel of our docs, and to ensure we have cross-references and navigation links across various documentation sites.
 
 ## :pencil: Issue templates
 
-We use [Issue Templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) to provide helpful prompts for common issues across all of our repositories.
-These templates live [in our `.github/` repository](https://github.com/nebari-dev/.github) and are automatically synchronized with several other repositories [with this GitHub Workflow](https://github.com/nebari-dev/.github/blob/main/.github/workflows/sync-issue-templates.yaml).
+We use [Issue Templates][github-issue-templates] to provide helpful prompts for common issues across all of our repositories.
+<!-- TODO: add workflow -->
+These templates live [in our `.github/` repository][nebari-community-health] and are automatically synchronized with several other repositories [with this GitHub Workflow][issue-sync-workflow].
 
-When you update one of the issue templates in that repository, a PR will automatically be created for the other repositories that are defined in [the `sync.yml` file](https://github.com/nebari-dev/.github/blob/main/.github/sync.yml).
+When you update one of the issue templates in that repository, a PR will automatically be created for the other repositories that are defined in [the `sync.yml` file][issue-sync-workflow].
+
+<!-- links -->
+[issue-sync-workflow]: ***
+[nebari-community-health]: https://github.com/nebari-dev/.github
+[github-issue-templates]: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
