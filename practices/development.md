@@ -38,10 +38,12 @@ Our team works in **two-week sprints**.
 Here is a brief overview of each sprint.
 
 1. **Tuesday (beginning of sprint)**
+
    - All the sprints begins with a sprint planning meeting.
    - In this meeting we discuss major accomplishments in the previous sprint. We then prioritize and assign the items that each team member will work on for the next sprint, and review items that require discussion and planning.
 
 2. **During the sprint**
+
    - Team members work on the items assigned to them at the sprint planning meeting.
    - We use the [🏃🏻 - Sprint board][sprint-board] to coordinate our activities during the sprint.
    - We provide updates about what we've been up to, what we're doing next, and where we need help via regular **team progress meetings**.
@@ -56,6 +58,7 @@ Here is a brief overview of each sprint.
 - Our **Project Manager** leads these meetings.
 
 <!-- TODO: add template -->
+
 :link: See [the Sprint Planning issue template](***) for the agenda / structure of these meetings.
 
 ### The `🏃🏻 - Sprint board`
@@ -133,7 +136,7 @@ These items adhere to the following principles:
 
 - The order of items should be roughly according to priority, with higher priority items at the top of lists.
 - Items on the board should have a **status** that signals whether they are ready to work or need more refinement before working.
-- If an item has multiple components or would otherwise take longer than a sprint to complete, create new issues as sub-tasks, and add *them* to the Sprint Board. Meta issues are useful to track these types of items.
+- If an item has multiple components or would otherwise take longer than a sprint to complete, create new issues as sub-tasks, and add _them_ to the Sprint Board. Meta issues are useful to track these types of items.
 
 ### Assigning to an issue
 
@@ -141,8 +144,7 @@ Only assign a backlog issue to somebody if it is **actively being worked on**.
 We assume that once somebody is assigned to an issue, it is part of an active sprint.
 Note that **all** issues on our Sprint Backlog should have somebody assigned to them.
 
-> **Warning**
-> **Our definition of "Work in Progress"**
+> **Warning** > **Our definition of "Work in Progress"**
 > Because issues that are actively being worked on must have somebody assigned to them, we use "the issues that have somebody assigned to them" as our definition of Work in Progress.
 
 ### Backlog item limits
@@ -161,7 +163,7 @@ So if we have `5.5` team members available (if one of them is at 50% FTE), then 
 
 ### Adding backlog items
 
-We should add items to our team backlog when we have capacity to do the work in the next 3 sprints, and when those items are ready to be prioritized over all the other work that we *could* do (e.g., all issues in our repositories and encoded in project backlogs).
+We should add items to our team backlog when we have capacity to do the work in the next 3 sprints, and when those items are ready to be prioritized over all the other work that we _could_ do (e.g., all issues in our repositories and encoded in project backlogs).
 
 > **Note**
 > It can be difficult to keep track of issues across all of our repositories, so our [Sprint board][sprint-board] and [Backlog board][backlog-board] are the single source of truth for all the work.
@@ -172,9 +174,9 @@ To add an item to the backlog, take the following steps:
 1. Look at the team backlog to make sure that it has capacity to absorb a new item.
 1. If it does not have capacity
    1. Consider adding it to a Project Backlog(i.e. documentation or community growth) or leave it in the issues of a repository.
-    We can always get to it later.
+      We can always get to it later.
    2. Choose whether you wish to **remove** an item from the backlog in order to make space.
-    Use your best judgment about whether this is the right thing to do, depending on the priority of the backlog items that are already on there.
+      Use your best judgment about whether this is the right thing to do, depending on the priority of the backlog items that are already on there.
 1. Place the new backlog item in the appropriate location, according to its perceived importance and urgency. To add the issue to the [Backlog board][backlog-board] click on the `Projects` tab in the GitHub UI and select the [🗃 - Nebari backlog board][backlog-board].
 
 ![Adding items to Nebari backlog organization board](../assets/Nebari_add_item_project.png)
@@ -185,9 +187,9 @@ It can be difficult to prioritize backlog items, and is ultimately a subjective 
 These criteria can be used to help guide your actions:
 
 1. **Impact**: How impactful will it be to resolve this item?
-  Will it affect many users or be particularly useful?
+   Will it affect many users or be particularly useful?
 1. **Urgency**: How important is it that we resolve this item quickly?
-  If it is lower impact, but urgent to accomplish, we may nonetheless wish to prioritize it.
+   If it is lower impact, but urgent to accomplish, we may nonetheless wish to prioritize it.
 1. **Effort**: How many moving pieces does this item have and how much deep thinking will it take to resolve?
 
 All else being equal, we should prioritize backlog items that are easier or faster to accomplish since this will be more bang for our buck.
@@ -231,7 +233,7 @@ See the section below for details.
 - **PRs should reference (and close) issues**.
   A pull request should almost always be related to an issue.
   Ideally, the issue should be tightly-scoped enough that the PR will close it when merged.
-  If you have an idea that *doesn't* yet have an issue, open an issue first and then make the PR to close it.
+  If you have an idea that _doesn't_ yet have an issue, open an issue first and then make the PR to close it.
   This ensures that the team has context around Pull Requests, and a chance to discuss before we implement.
 - **Use GitHub's `Request Review` feature**.
   Add specific team members so that it is clear who is needed to review the PR.
@@ -261,7 +263,7 @@ As such, we follow some more specific guidelines for these kinds of changes.
 If a change affects the Nebari team policies, or makes significant changes to our documentation or public-facing material, then you should also follow these extra policies:
 
 - **Ensure that the team has consented**.
-  For any major change, you should make sure that you have followed best-practices in consent-based decision making.
+  For any major change, you should make sure that you have followed best-practices in consent-based decision-making.
 
 ## :pencil2: How to keep track of projects
 
@@ -318,6 +320,7 @@ Here are some helpful resources for more information about consent-based decisio
 - A well-known technical proposal on "Consent via humming": <https://tools.ietf.org/html/rfc7282>
 
 <!-- links -->
+
 [sprint-board]: https://github.com/orgs/nebari-dev/projects/4
 [backlog-board]: https://github.com/orgs/nebari-dev/projects/2
 [documentation-board]: https://github.com/orgs/nebari-dev/projects/3
