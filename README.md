@@ -1,10 +1,10 @@
-# governance
+# Nebari governance
 
 ✨ Governance-related work for Nebari-dev
 
 ## Items pending
 
-- Governance description
+- Governance page
 - Reviewer guidelines
 - Teams and onboarding/offboarding
 - Release guidelines
