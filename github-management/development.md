@@ -2,6 +2,8 @@
 
 This section describes how our development team carries out its planning and day-to-day work.
 
+## Table of contents
+
 - [Development and backlog workflow](#development-and-backlog-workflow)
   - [:running_woman: Team Sprints](#running_woman-team-sprints)
     - [Sprint cadence](#sprint-cadence)

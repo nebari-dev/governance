@@ -8,6 +8,8 @@ When we execute on our roadmap, we keep learning and our assessment of some topi
 
 We describe some initiatives as "investigations" or "explorations" which means our goal in the next few months is to better understand the problem and potential solutions before scheduling actual feature work. Once an investigation is done, we will update our plans, either deferring the initiative or committing to it.
 
+## Table of contents
+
 - [Roadmap - 2022](#roadmap---2022)
   - [Legend of annotations](#legend-of-annotations)
   - [Values](#values)

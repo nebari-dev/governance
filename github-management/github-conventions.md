@@ -2,6 +2,8 @@
 
 This page describes some common conventions and patterns that we follow in all of our GitHub repositories within the `Nebari-dev` organisation.
 
+## Table of contents
+
 - [GitHub repository conventions](#github-repository-conventions)
   - [:label: Issue labels](#label-issue-labels)
     - [Issue Type](#issue-type)
@@ -17,6 +19,7 @@ There are a few issue labels that we use to provide key metadata in our issues.
 These are added to all `nebari-dev/` repositories, and share the same meaning across each.
 
 > **Note**
+>
 > - Only **Issue Type** is required for all issues.
 > - Repositories may define their own labels in addition to the ones described here for a given category, unless otherwise noted.
 
@@ -29,8 +32,8 @@ Issue types are mutually-exclusive - **there may only be one issue type per issu
 
 There are a few issue types that are defined for all repositories, for example:
 
-* ![type: enhancement 💅🏼](https://img.shields.io/badge/-type:enhancement%20💅🏼-9D73D9.svg): an incremental improvement to something
-* ![type: bug 🐛](https://img.shields.io/badge/-type:bug%20🐛-9D73D9.svg): a problem that needs to be fixed
+- ![type: enhancement 💅🏼](https://img.shields.io/badge/-type:enhancement%20💅🏼-9D73D9.svg): an incremental improvement to something
+- ![type: bug 🐛](https://img.shields.io/badge/-type:bug%20🐛-9D73D9.svg): a problem that needs to be fixed
 
 In addition, other repositories may use repository-specific types, with the caveat that **all issues must still only have one `type` label**.
 
@@ -78,25 +81,30 @@ They are highly repository-specific, optional, and non-exclusive (so issues may 
 
 Here are some example tags:
 
-* ![area: documentation 📖](https://img.shields.io/badge/-area:%20documentation%20📖-6FB7BF.svg): related to documentation in a repository
-* ![area: CI 👷🏽‍♀️](https://img.shields.io/badge/-area:%20ci%20👷🏽‍♀️-6FB7BF.svg): related to continuous integration/deployment
-* ![area: design 🎨](https://img.shields.io/badge/-area:%20design%20🎨-6FB7BF.svg): related to design items including UX/UI and graphic design
+- ![area: documentation 📖](https://img.shields.io/badge/-area:%20documentation%20📖-6FB7BF.svg): related to documentation in a repository
+- ![area: CI 👷🏽‍♀️](https://img.shields.io/badge/-area:%20ci%20👷🏽‍♀️-6FB7BF.svg): related to continuous integration/deployment
+- ![area: design 🎨](https://img.shields.io/badge/-area:%20design%20🎨-6FB7BF.svg): related to design items including UX/UI and graphic design
 
 ## :book: Documentation
 
 All of our team documentation is built with the [Docusaurus documentation engine](https://docusaurus.io/).
+
 <!-- TODO: update with theme when done -->
+
 We use a [shared Docusaurus theme](***) across all of our repositories, in order to standardize the look and feel of our docs, and to ensure we have cross-references and navigation links across various documentation sites.
 
 ## :pencil: Issue templates
 
 We use [Issue Templates][github-issue-templates] to provide helpful prompts for common issues across all of our repositories.
+
 <!-- TODO: add workflow -->
+
 These templates live [in our `.github/` repository][nebari-community-health] and are automatically synchronized with several other repositories [with this GitHub Workflow][issue-sync-workflow].
 
 When you update one of the issue templates in that repository, a PR will automatically be created for the other repositories that are defined in [the `sync.yml` file][issue-sync-workflow].
 
 <!-- links -->
+
 [issue-sync-workflow]: ***
 [nebari-community-health]: https://github.com/nebari-dev/.github
 [github-issue-templates]: https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository

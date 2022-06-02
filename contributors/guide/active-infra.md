@@ -2,6 +2,8 @@
 
 We follow team policies for review/merge that are more specific than our general development merge policies.
 
+## Table of contents
+
 - [Active infrastructure review and merge guidelines](#active-infrastructure-review-and-merge-guidelines)
   - [Changing active infrastructure in general](#changing-active-infrastructure-in-general)
   - [Terraform changes](#terraform-changes)

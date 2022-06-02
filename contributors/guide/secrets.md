@@ -2,29 +2,32 @@
 
 This section describes how Nebari team members share and access sensitive credentials that allow permissions on our infrastructure and services.
 
+## Table of contents
+
 - [Secrets, credentials, and passwords](#secrets-credentials-and-passwords)
   - [:closed_lock_with_key: Where are secrets located?](#closed_lock_with_key-where-are-secrets-located)
   - [:key: `sops` overview](#key-sops-overview)
     - [Set up `sops`](#set-up-sops)
     - [Decrypt secrets with `sops`](#decrypt-secrets-with-sops)
     - [Learn more about `sops`](#learn-more-about-sops)
-  
+
 ## :closed_lock_with_key: Where are secrets located?
 
 - **For most services**: Our team tries to use services that allow for multi-user authorization.
-This means we try to use services where team members have their own account with permissions on the service, so no secrets need be shared (for example, GitHub organizations).
+  This means we try to use services where team members have their own account with permissions on the service, so no secrets need be shared (for example, GitHub organizations).
 
 - **When we must share secrets**: If we must share secrets for an account (for example, credentials for deployment to cloud infrastructure), then we use [the command-line tool `sops`](https://github.com/mozilla/sops) to encrypt our secrets.
-See [below for information](#sops-overview) about how to use `sops`.
+  See [below for information](#sops-overview) about how to use `sops`.
 
 We try to keep encrypted secrets files near their configuration files.
 For example, we'll keep a Kubernetes configuration file in the same folder as the secrets that are needed to make changes to that cluster.
+
 <!-- See [the Nebari GKE cluster folder](https://github.com/Nebari-org/infrastructure/tree/HEAD/config/clusters/Nebari) for an example. -->
 
 ## :key: `sops` overview
 
 [`sops`](https://github.com/mozilla/sops) is a command-line tool for encrypting and decrypting secrets that are on disk.
-It is similar to [`git-crypt`](https://github.com/AGWA/git-crypt) (which is what is used by the Binder SRE team), but gives a bit more visibility into the encrypted fields by only encrypting the *values* rather than the *keys*.
+It is similar to [`git-crypt`](https://github.com/AGWA/git-crypt) (which is what is used by the Binder SRE team), but gives a bit more visibility into the encrypted fields by only encrypting the _values_ rather than the _keys_.
 
 Here's an example of a file that has been encrypted with `sops` (from [the 2i2c `infrastructure` configuration](https://github.com/Nebari-org/infrastructure/blob/HEAD/config/clusters/2i2c/enc-grafana-token.secret.yaml)):
 

@@ -1,6 +1,7 @@
 # Nebari governance
 
-✨ Governance-related work for Nebari-dev
+Welcome to Nebari, we are glad to have you here.
+✨ This is the starting point for joining and contributing to the Nebari community.
 
 ## Items pending
 
