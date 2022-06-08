@@ -11,13 +11,9 @@ The release process for `nebari` is managed by a checklist which maintainers can
 
 ### Current release details
 
-|                           |                                                                                     |
-| :------------------------ | :---------------------------------------------------------------------------------- |
-| PyPI version              | [![PyPI version](https://badge.fury.io/py/qhub.svg)](https://badge.fury.io/py/qhub) |
-| Conda-Forge version | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qhub.svg)](https://anaconda.org/conda-forge/qhub) |
-| Versioning system scheme | [SemVer](https://semver.org/) `*`                                                       |
-| Cadence                   | AdHoc `**`                                                                               |
-
+|                                    PyPI version                                     |                                               Conda-Forge version                                               |     Versioning system scheme      |  Cadence   |
+| :---------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: | :-------------------------------: | :--------: |
+| [![PyPI version](https://badge.fury.io/py/qhub.svg)](https://badge.fury.io/py/qhub) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qhub.svg)](https://anaconda.org/conda-forge/qhub) | [SemVer](https://semver.org/) `*` | AdHoc `**` |
 
 > `*` a switch to CalVer has been [proposed](https://github.com/Quansight/qhub/issues/1242).
 
@@ -33,6 +29,6 @@ The release process for `nebari` is managed by a checklist which maintainers can
 
 ### nebari-docker-images 
 
-The nebari-docker-images repo contains the Dockerfiles for the JupyterHub, JupyterLab and Dask-Gateway Kubernetes deployments. This repo also contains the workflow needed to build and push them the images to [github.com/orgs/nebari-dev/packages](https://github.com/orgs/nebari-dev/packages) and [quay.io/organization/nebari](https://quay.io/organization/nebari).
+The [nebari-docker-images](https://github.com/nebari-dev/nebari-docker-images) repo contains the Dockerfiles for the JupyterHub, JupyterLab and Dask-Gateway Kubernetes deployments. This repo also contains the workflow needed to build and push them the images to [github.com/orgs/nebari-dev/packages](https://github.com/orgs/nebari-dev/packages) and [quay.io/organization/nebari](https://quay.io/organization/nebari).
 
 > These images are built and tagged with the same version number of the corresponding `nebari` release. Included in the release checklist linked above.
