@@ -15,7 +15,7 @@ The release process for `nebari` is managed by a checklist which maintainers can
 | :---------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: | :-------------------------------: | :--------: |
 | [![PyPI version](https://badge.fury.io/py/qhub.svg)](https://badge.fury.io/py/qhub) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qhub.svg)](https://anaconda.org/conda-forge/qhub) | [SemVer](https://semver.org/) `*` | AdHoc `**` |
 
-> `*` a switch to CalVer has been [proposed](https://github.com/Quansight/qhub/issues/1242).
+> `*` [a switch to CalVer has been proposed](https://github.com/Quansight/qhub/issues/1242).
 
 > `**` coupled with the switch to CalVer versioning, we aim to adopt a more regular cadence. Something on the order of once a month or once every six weeks. 
 
