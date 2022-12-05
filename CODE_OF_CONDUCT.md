@@ -1,7 +1,7 @@
 # Nebari Code of Conduct
 
 Nebari is a community-oriented and community-led project.
-We value the participation of every member of our community and want to ensure that every contributor has an enjoyable and fulfilling experience
+We value the participation of every member of our community and want to ensure that every contributor has an enjoyable and fulfilling experience.
 We are committed to creating a friendly and respectful place for learning, teaching, and contributing.
 Accordingly, everyone who participates in the Nebari project is expected to show respect and courtesy to other community members at all times.
 
