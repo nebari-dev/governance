@@ -35,7 +35,7 @@ Upon receiving a report of an incident, the CoC committee will review the incide
 
 This information will be collected either in person or in writing.
 The CoC committee will provide a written summary of the information surrounding the incident.
-All participants will be anonymized in the summary report, referred to as "Community member 1", "Community member 2", or "Research team member 1".
+All participants will be anonymized in the summary report, referred to as "Community member 1", "Community member 2", and so on.
 The "de-anonymizing key" will be kept in a separate file and only accessed to link repeated reports against the same person over time.
 
 The CoC committee will aim to have a resolution agreed upon within one week.
