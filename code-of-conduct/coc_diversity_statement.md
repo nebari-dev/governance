@@ -6,4 +6,4 @@ No matter how you identify yourself or how others perceive you: we welcome you. 
 
 Though we welcome people fluent in all languages, Nebari development is conducted in English.
 
-Standards for behavior in the Nebari community are detailed in the [Code of Conduct details](./coc_details.md). Participants in our community should uphold these standards in all their interactions and help others to do so as well (see [reporting guidelines](./coc_reporting.md)).
+Standards for behavior in the Nebari community are detailed in the [Code of Conduct details](./coc_details.md). Participants in our community are expected to uphold these standards in all their interactions and help others to do so as well (see [reporting guidelines](./coc_reporting.md)).
