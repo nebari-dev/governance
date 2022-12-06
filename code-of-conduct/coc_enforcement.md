@@ -9,7 +9,7 @@ Enforcement of the Code of Conduct should be respectful and not include any hara
 The Code of Conduct committee is:
 
 * Tania Allard: trallard [at] bitsandchips.me
-* Pavithra Eswaramoorthy: (todo: contact details)
+* Pavithra Eswaramoorthy: hi [at] pavithraes.me
 
 As the community grows, we will seek to build a larger committee including members outside of the core development team.
 
