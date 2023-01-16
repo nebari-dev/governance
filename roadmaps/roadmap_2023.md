@@ -33,6 +33,7 @@ We carried the unfinished tasks and added some new ones.
 
 - 🏗️ - Improve our overall users’ experience
   - 🗃 - Standardize feedback and user research processes
+  - 🗃 - Improve the Nebari CLI for better experience and accessibility
 - 🏗 - Updates to the documentation
   - 🗃 - Evaluate [terraform-docs](https://terraform-docs.io/) to document Terraform modules
   - 🏗️ - Add API documentation
