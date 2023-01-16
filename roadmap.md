@@ -1,4 +1,4 @@
-# Roadmap
+# Nebari roadmap
 
 Our roadmap typically looks out 12-18 months, and we establish topics we want to work on.
 
@@ -11,19 +11,6 @@ As a result, we may add or drop topics as we go. After around 12 months we come 
 We describe some initiatives as "investigations" or "explorations" which means our goal in the next few months is to better understand the problem and potential solutions before scheduling actual feature work.
 Once an investigation is done, we will update our plans, either deferring the initiative or committing to it.
 
-## Legend of annotations
-
-| Mark | Description                                  |
-| ---- | -------------------------------------------- |
-| 🗃    | work not started -usually within the backlog |
-| 📬   | scoped and due to work on                    |
-| 🏗    | ongoing work                                 |
-| ✅   | work completed                               |
-| ⛔️  | blocked item                                 |
-| 🔮   | stretch goal                                 |
-
-We use the same legends across our project boards to keep planning and messages consistent
-
 ## Values
 
 Before we go into the details, let's start with our values that guide the development of Nebari.
@@ -35,6 +22,19 @@ Before we go into the details, let's start with our values that guide the develo
 - We must not directly depend on proprietary cloud vendor specific products or APIs. This ensures that users can port their infrastructure to any cloud provider of their choice, or run it on their own hardware with purely open source software.
 
 (Definitions of `MUST`, `MUST NOT`, `SHOULD`, `MAY`, are defined in [RFC 2119](https://tools.ietf.org/html/rfc2119))
+
+## Legend of annotations
+
+We use the same legends across our project boards to keep planning and messages consistent
+
+| Mark | Description                                  |
+| ---- | -------------------------------------------- |
+| 🗃    | work not started -usually within the backlog |
+| 📬   | scoped and due to work on                    |
+| 🏗    | ongoing work                                 |
+| ✅   | work completed                               |
+| ⛔️  | blocked item                                 |
+| 🔮   | stretch goal                                 |
 
 ## Documents
 
