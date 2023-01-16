@@ -15,7 +15,8 @@
 
 ## Themes for 2023
 
-For 2023, we'll continue focusing on the [same themes as last year](./roadmap_2022.md#themes-for-2022).
+For 2023, we'll continue to focus on the [same themes as last year](./roadmap_2022.md#themes-for-2022).
+We carried the unfinished tasks and added some new ones.
 
 ### Engineering
 
