@@ -20,13 +20,13 @@ For 2022, we'll particularly focus on the following themes.
 ### Engineering
 
 - ✅ - Improve team’s overall software development practices
-- 🏗️ - Improve our GitHub practices and efficiency
+- ✅ - Improve our GitHub practices and efficiency
   - ✅ - Unify issues, PRs and RFCs into issue boards
-  - 🏗 - Reevaluate the use of bots, pre-commits, and other automations → they should help make the development process more efficient (i.e. instead of blocking contributions or adding unnecessary noise)
+  - ✅ - Reevaluate the use of bots, pre-commits, and other automations → they should help make the development process more efficient (i.e. instead of blocking contributions or adding unnecessary noise)
   - ✅ - Adopt the use of `gitlab-flow` moving forward
-  - 🏗 - Create triaging guidelines
-- 🗃 - Document and streamline our release process
-  - 🗃 - Automate the creation of release checklists and document all the to-release steps
+  - ✅ - Create triaging guidelines
+- ✅ - Document and streamline our release process
+  - ✅ - Automate the creation of release checklists and document all the to-release steps
   - ✅ - Migrate from `SemVer` to `CalVer` (Done with the Nebari rename in October 2022)
 - 🗃 - adopt overall development and structure standards
   - 🗃 - All repos must have an [architecture.md](http://architecture.md) or source code organisation guide
@@ -38,7 +38,7 @@ For 2022, we'll particularly focus on the following themes.
 - 🏗️ - Improve our overall users’ experience
   - 🗃 - Standardize feedback and user research processes
   - ✅ - Adopt a user design first approach
-  - 🏗️ - Refactor the Nebari CLI
+  - ✅ - Refactor the Nebari CLI
   - ✅ - Simplify the first deployment experience for new users
 - 🏗 - Major updates to the documentation
   - ✅ - Audit current documentation and identify gaps and outdated content
@@ -49,14 +49,14 @@ For 2022, we'll particularly focus on the following themes.
   - ✅ - Create References
   - ✅ - Create Conceptual guides
   - ✅ - Create how-tos
-  - 🏗 - Create supporting material such as schematics and other diagrams
+  - ✅ - Create supporting material such as schematics and other diagrams
 
 > **Note**
 > While many items in the documentation section are marked as **complete** there is still a lot of work to be done to improve the overall documentation experience. We will continue to work on this in 2022-2023.
 
 ### Performance and stability
 
-- 🗃 - Ensure all the current integrations are workings, they have corresponding documentation and are tested accordingly
+- 🏗️ - Ensure all the current integrations are workings, they have corresponding documentation and are tested accordingly
 - 🗃 - More robust testing
   - 🗃 - Run scheduled tests on top of those from PRs and releases
   - 🏗️ - Add tests to the docker images
@@ -81,7 +81,7 @@ For 2022, we'll particularly focus on the following themes.
   - ✅ - Have a public roadmap in GitHub
   - 📬 - Adopt a promise framework such as [https://about.gitlab.com/company/stewardship/](https://about.gitlab.com/company/stewardship/) (complementary to the governance work)
   - 🗃 - Adopt public and transparent guidelines on how we interact with the broader OSS ecosystem
-  - 🗃 - Either host or join community calls
+  - ✅ - Either host or join community calls
 
 - 🏗️ - Formalize our governance
   - 🏗️ - Adopt a decision-making process: RFD, Nebari enhancement proposals
@@ -90,13 +90,13 @@ For 2022, we'll particularly focus on the following themes.
 
 ### Design
 
-- 🏗️ - Create and launch Nebari OSS website
-- 🏗️ - Unify documentation theme and main site
+- ✅ - Create and launch Nebari OSS website
+- ✅ - Unify documentation theme and main site
 - 🗃 - Improve the accessibility of products we own or release
-- 🏗️ - Rebranding - Nebari
+- ✅ - Rebranding - Nebari
   - ✅ - Develop brand guidelines, assets (including logos, illustrations…)
-  - 🏗️ - Refresh any outdated assets or schematics
-  - 🏗️ - Launch and announcement
+  - ✅ - Refresh any outdated assets or schematics
+  - ✅ - Launch and announcement
 
 ### Explorations
 
