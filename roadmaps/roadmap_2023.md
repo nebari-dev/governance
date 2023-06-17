@@ -23,11 +23,17 @@ We carried the unfinished tasks and added some new ones.
 - 🗃 - Adopt overall development and structure standards
   - 🗃 - All repos must have an [architecture.md](http://architecture.md) or source code organisation guide
   - 🏗 - Adopt and document coding guidelines
-- 🗃 - Allow custom docker images
+- 📬 - Allow custom docker images
     - 🗃 - Create templates (e.g. cookie-cutter) with minimum requirements
     - 🗃 - Create tutorials for how to use the templates and add customization
     - 🗃 - Add tests for validating custom images
     - 🗃 - Update charts/config to allow pulls from other container registries
+- ✅ - Integrate new conda-store UI
+- 🏗 - Add an extension mechanism to Nebari
+  - 🏗 - Design and implement extension architecture
+  - 📬 - Move relevant integrations to the extension framework
+  - 🗃 - Write tutorials for creating new extensions
+- 🗃 - Replace CDS Dashboards, with new tooling
 
 ### User experience
 
@@ -38,8 +44,8 @@ We carried the unfinished tasks and added some new ones.
   - 🗃 - Evaluate [terraform-docs](https://terraform-docs.io/) to document Terraform modules
   - 🏗️ - Add API documentation
   - 🗃 - Create new Tutorials for integrations
-  - 🏗️ - Migrate all documentation from `qhub.dev`
-  - 🗃 - Sunset `qhub.dev` and archive corresponding documents
+  - ✅ - Migrate all documentation from `qhub.dev`
+  - ✅ - Sunset `qhub.dev` and archive corresponding documents
 
 ### Performance and stability
 
@@ -47,6 +53,8 @@ We carried the unfinished tasks and added some new ones.
 - 🗃 - More robust testing
   - 🗃 - Run scheduled tests on top of those from PRs and releases
   - 🏗️ - Add tests to the docker images
+- 📬 - Upgrade to JupyterHub 4.0
+- 📬 - Upgrade to latest Kubernetes version
 
 ### Reliability and security
 
@@ -78,18 +86,20 @@ We carried the unfinished tasks and added some new ones.
 ### Design
 
 - 🗃 - Improve the accessibility of products we own or release
-- 🏗️ - Improve the website and documentation design
-  - 🏗️ - Complete the website design
-  - 🏗️ - Make the website theme consistent
+- ✅ - Improve the website and documentation design
+  - ✅ - Complete the website design
+  - ✅ - Make the website theme consistent
 
 ### Explorations
 
-- 🏗 - Open source MLOps story
-  - 🏗 - Workflow automation - orchestration (Argo) maybe others
+- ✅ - Open source MLOps story
+  - ✅ - Workflow automation - orchestration (Argo) maybe others
     - ✅ - Argo has been added as a backend integration in Nebari
+    - ✅ - Add Jupyter-scheduler to complement Argo
+    - 📬 - Remove kbatch integration
   - 🔮 - Integrations with CML, DVC
 - 🔮 - Jupyter experience improvements
-  - 🗃 - Evaluate which extensions we should add by default
+  - ✅ - Evaluate which extensions we should add by default
   - 🔮 - Accessible theming
 - 🔮 - Improve monitoring and logging
   - 🔮 - Grafana dashboards improvements
@@ -97,5 +107,5 @@ We carried the unfinished tasks and added some new ones.
   - 🔮 - Adopt [Kubescape](https://github.com/armosec/kubescape)
 - 🔮 - Evaluate the use of (dagger)[https://dagger.io/blog/public-launch-announcement](https://dagger.io/blog/public-launch-announcement)
 - 🔮 - Expand test suite
-  - 🔮 - Verify stability of extensions
+  - 📬 - Verify stability of (Jupyter) extensions
   - 🔮 - Explore testing Nebari integrations
