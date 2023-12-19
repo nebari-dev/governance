@@ -30,7 +30,7 @@ We use the same legends across our project boards to keep planning and messages 
 | Mark | Description                                  |
 | ---- | -------------------------------------------- |
 | 🗃    | work not started -usually within the backlog |
-| 📬   | scoped and due to work on                    |
+| 📬   | **scoped** and due to work on                    |
 | 🏗    | ongoing work                                 |
 | ✅   | work completed                               |
 | ⛔️  | blocked item                                 |
@@ -38,5 +38,6 @@ We use the same legends across our project boards to keep planning and messages 
 
 ## Documents
 
+* [Roadmap for 2024](roadmaps/roadmap_2024.md)
 * [Roadmap for 2023](roadmaps/roadmap_2023.md)
 * [Roadmap for 2022](roadmaps/roadmap_2022.md)
