@@ -4,7 +4,7 @@
 
 - [Roadmap - 2023](#roadmap---2023)
   - [Table of contents](#table-of-contents)
-  - [Themes for 2023](#themes-for-2022)
+  - [Themes for 2023](#themes-for-2023)
     - [Engineering](#engineering)
     - [User experience](#user-experience)
     - [Performance and stability](#performance-and-stability)
@@ -29,11 +29,11 @@ We carried the unfinished tasks and added some new ones.
     - 🗃 - Add tests for validating custom images
     - 🗃 - Update charts/config to allow pulls from other container registries
 - ✅ - Integrate new conda-store UI
-- 🏗 - Add an extension mechanism to Nebari
-  - 🏗 - Design and implement extension architecture
+- ✅ - Add an extension mechanism to Nebari
+  - ✅ - Design and implement extension architecture
   - 📬 - Move relevant integrations to the extension framework
-  - 🗃 - Write tutorials for creating new extensions
-- 🗃 - Replace CDS Dashboards, with new tooling
+  - ✅ - Write tutorials for creating new extensions
+- 🏗 - Replace CDS Dashboards, with new tooling
 
 ### User experience
 
@@ -49,12 +49,13 @@ We carried the unfinished tasks and added some new ones.
 
 ### Performance and stability
 
-- 🏗️ - Ensure all the current integrations are workings, they have corresponding documentation and are tested accordingly
+- ✅ - Ensure all the current integrations are workings, they have corresponding documentation and are tested accordingly
 - 🗃 - More robust testing
   - 🗃 - Run scheduled tests on top of those from PRs and releases
   - 🏗️ - Add tests to the docker images
-- 📬 - Upgrade to JupyterHub 4.0
-- 📬 - Upgrade to latest Kubernetes version
+- 🏗️ - Upgrade to JupyterHub 4.0
+- 🏗️ - Upgrade to JupyterLab 4.0
+- 🏗️ - Upgrade to latest Kubernetes version
 
 ### Reliability and security
 
@@ -66,7 +67,7 @@ We carried the unfinished tasks and added some new ones.
   - 🗃 - Critical deployments and other releases require `code owner` approval
   - 🏗️ - Reduce re-creation of artifacts and unnecessary runs (for example, add `[ci skip]` for Kubernetes tests)
 - 🗃 - Decentralize development and deployment
-  - 🗃 - All deployments should have a `staging` → `production` pattern
+  - 🗃 - All deployments should have a `staging` → `production` pattern (documentation)
 - 🗃 - Adopt a policy for secrets management
   - 🏗️ - Investigate, scope, and implement the use of [SOPS](https://github.com/mozilla/sops)
   - 🗃 - Document the secrets management process for maintainers
@@ -78,9 +79,9 @@ We carried the unfinished tasks and added some new ones.
   - 🗃 - Adopt public and transparent guidelines on how we interact with the broader OSS ecosystem
   - 📬 - Measure, track, and grow the Nebari community using the Orbit model
 
-- 🏗️ - Formalize our governance
-  - 🏗️ - Adopt a decision-making process: RFD, Nebari enhancement proposals
-  - 🏗️ - Define roles and expectations for: maintainers, contributors, emeritus maintainers, etc. and how to attain membership to said groups
+- ✅ - Formalize our governance
+  - ✅ - Adopt a decision-making process: RFD, Nebari enhancement proposals
+  - ✅ - Define roles and expectations for: maintainers, contributors, emeritus maintainers, etc. and how to attain membership to said groups
     - 🗃 - Adopt and onboarding and off boarding checklist for new and retiring maintainers
 
 ### Design
@@ -96,16 +97,16 @@ We carried the unfinished tasks and added some new ones.
   - ✅ - Workflow automation - orchestration (Argo) maybe others
     - ✅ - Argo has been added as a backend integration in Nebari
     - ✅ - Add Jupyter-scheduler to complement Argo
-    - 📬 - Remove kbatch integration
+    - ✅ - Remove kbatch integration
   - 🔮 - Integrations with CML, DVC
-- 🔮 - Jupyter experience improvements
+- 🏗️ - Jupyter experience improvements
   - ✅ - Evaluate which extensions we should add by default
-  - 🔮 - Accessible theming
+  - 🏗️ - Accessible theming
 - 🔮 - Improve monitoring and logging
-  - 🔮 - Grafana dashboards improvements
+  - ✅ - Grafana dashboards improvements
 - 🔮 - Security explorations
   - 🔮 - Adopt [Kubescape](https://github.com/armosec/kubescape)
 - 🔮 - Evaluate the use of (dagger)[https://dagger.io/blog/public-launch-announcement](https://dagger.io/blog/public-launch-announcement)
-- 🔮 - Expand test suite
+- 📬 - Expand test suite
   - 📬 - Verify stability of (Jupyter) extensions
   - 🔮 - Explore testing Nebari integrations
