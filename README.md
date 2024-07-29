@@ -19,3 +19,9 @@ This repository contains governance-related work for Nebari, including:
 📈 Details about [documentation analytics](analytics.md)
 
 💬 Issues that are [requests for discussions](https://github.com/nebari-dev/governance/issues?q=is%3Aissue+is%3Aopen+label%3A%22needs%3A+discussion+%F0%9F%92%AC%22+)
+
+Some governance processes are in the documentation:
+
+🤝 [Team structure and roles](https://www.nebari.dev/docs/community/team-structure)
+
+🗳️ [Decision making processes](https://www.nebari.dev/docs/community/decision-making)
