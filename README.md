@@ -22,6 +22,6 @@ This repository contains governance-related work for Nebari, including:
 
 Some governance processes are in the documentation:
 
-🤝 [Team structure and roles](https://www.nebari.dev/docs/community/team-structure)
+🤝 [Team structure and roles](https://www.nebari.dev/community/team-structure)
 
-🗳️ [Decision making processes](https://www.nebari.dev/docs/community/decision-making)
+🗳️ [Decision making processes](https://www.nebari.dev/community/decision-making)
