@@ -1,0 +1,4 @@
+# Agent-specific instruction files. Repository guidance lives in AGENTS.md;
+# these are thin local wrappers that point at it.
+CLAUDE.md
+CLAUDE.local.md
