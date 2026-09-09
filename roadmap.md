@@ -1,42 +1,70 @@
-# Nebari roadmap
+# Nebari platform roadmap
 
-Our roadmap typically looks out 12-18 months, and we establish topics we want to work on.
+This is the **platform** roadmap.
+It covers only cross-cutting direction: work that spans repositories, or that changes a contract other repositories depend on.
 
-We develop our roadmap based on the findings we made over the course of the last year,
-and what we heard from the users and collaborators in issues, in face-to-face discussions, and other media.
-
-When we execute on our roadmap, we keep learning and our assessment of some topics listed changes.
-As a result, we may add or drop topics as we go. After around 12 months we come together to develop the next roadmap.
-
-We describe some initiatives as "investigations" or "explorations" which means our goal in the next few months is to better understand the problem and potential solutions before scheduling actual feature work.
-Once an investigation is done, we will update our plans, either deferring the initiative or committing to it.
+It is deliberately thin.
+The Nebari Kubernetes Platform is a stable infrastructure core plus many independently developed software packs, and each of those repositories keeps its own detailed roadmap.
+If you are looking for what a particular pack is doing next, look at that pack's repository, not here.
 
 ## Values
 
-Before we go into the details, let's start with our values that guide the development of Nebari.
+These guide platform development.
 
-- We strive for a smooth and productive experience for end-users - this places user experience at the core of everything we build.
+- We strive for a smooth and productive experience for end-users. This places user experience at the core of everything we build.
 - Performance trumps functionality.
-- The documentation must be as transparent & accessible as possible.
-- We build on open source software. In addition, any changes we make to open source software will be made in public and/or contributed upstream, so our users continue to have access to them regardless of where their infrastructure is.
-- We must not directly depend on proprietary cloud vendor specific products or APIs. This ensures that users can port their infrastructure to any cloud provider of their choice, or run it on their own hardware with purely open source software.
+- The documentation must be as transparent and accessible as possible.
+- We build on open source software. Any changes we make to open source software will be made in public and contributed upstream, so our users continue to have access to them regardless of where their infrastructure is.
+- We must not directly depend on proprietary, cloud-vendor-specific products or APIs. This ensures users can port their infrastructure to any cloud provider of their choice, or run it on their own hardware with purely open source software.
 
-(Definitions of `MUST`, `MUST NOT`, `SHOULD`, `MAY`, are defined in [RFC 2119](https://tools.ietf.org/html/rfc2119))
+Definitions of `MUST`, `MUST NOT`, `SHOULD`, and `MAY` are in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 ## Legend of annotations
 
-We use the same legends across our project boards to keep planning and messages consistent
+These marks are shared across the project boards and the per-repository roadmaps, so that planning reads the same way everywhere.
 
-| Mark | Description                                  |
-| ---- | -------------------------------------------- |
-| 🗃    | work not started -usually within the backlog |
-| 📬   | scoped and due to work on                    |
-| 🏗    | ongoing work                                 |
-| ✅   | work completed                               |
-| ⛔️  | blocked item                                 |
-| 🔮   | stretch goal                                 |
+| Mark | Description |
+| ---- | ----------- |
+| 🗃 | work not started, usually in the backlog |
+| 📬 | scoped and due to work on |
+| 🏗 | ongoing work |
+| ✅ | work completed |
+| ⛔️ | blocked item |
+| 🔮 | stretch goal |
 
-## Documents
+## Current platform direction
 
-* [Roadmap for 2023](roadmaps/roadmap_2023.md)
-* [Roadmap for 2022](roadmaps/roadmap_2022.md)
+Establishing the federated governance model and the contracts it depends on.
+
+### Governance and standards
+
+- 🏗 Adopt federated governance with central contracts
+  - ✅ Governance, pack policy, repository standards, and naming policy published in this repository
+  - 📬 Rewrite the team structure and decision-making pages on the website to match
+  - 📬 Reconcile the RFD issue template with the canonical [RFD lifecycle](GOVERNANCE.md#rfd-lifecycle)
+- 📬 Roll out the [repository standards](repository-standards.md) across the organization
+  - 📬 Apply organization rulesets for branch protection
+  - 📬 Stand up the shared repository-conformance check
+  - 🗃 Seed missing required files in existing repositories
+  - 🗃 Relicense the remaining repositories to Apache-2.0
+
+### The platform contract
+
+- 📬 Publish the versioned `NebariApp` Pack Specification with the operator
+- 📬 Encode the repository-standard defaults and the revised maturity model in the software pack template
+- 🗃 Correct the stale `NicApp` references in the infrastructure core
+
+### Deferred
+
+Recorded so they are not mistaken for oversights. Both are described in the [pack policy](pack-policy.md#what-does-not-exist-yet).
+
+- 🔮 A public catalog of community packs
+- 🔮 A process for promoting a community pack to official
+
+## Archived roadmaps
+
+The roadmaps below covered **Nebari Classic**, the single monolithic platform shipped from one repository.
+That architecture has been replaced, and their content is specific to it, so they are kept as history and are not carried forward.
+
+- [Roadmap for 2023 (archived)](roadmaps/roadmap_2023.md)
+- [Roadmap for 2022 (archived)](roadmaps/roadmap_2022.md)

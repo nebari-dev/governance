@@ -5,7 +5,8 @@ As such, we do not tolerate behavior that is disrespectful to our community memb
 We do not tolerate discrimination or harassment based on characteristics that include, but are not limited to: gender identity and expression, sexual orientation, disability, physical appearance, body size, citizenship, nationality, ethnic or social origin, pregnancy, familial status, veteran status, genetic information, religion or belief (or lack thereof), membership of a national minority, property, age, education, socio-economic status, technical choices, and experience level.
 
 Everyone who participates in the Nebari project's activities is required to conform to this Code of Conduct.
-This Code of Conduct applies to all spaces managed by Nebari including, but not limited to, in person and online focus groups and workshops, and communications online via GitHub.
+This Code of Conduct applies to all spaces managed by the `nebari-dev` organization, including but not limited to its repositories and issue trackers, in-person and online focus groups and workshops, community calls, and communications online via GitHub.
+Software packs maintained outside the organization are not covered by it. We offer this Code of Conduct as a recommended default for anyone building on Nebari, rather than imposing it downstream.
 By participating, contributors indicate their acceptance of the procedures by which the Nebari development team resolves any Code of Conduct incidents, which may include storage and processing of their personal information.
 
 ## Expected behavior

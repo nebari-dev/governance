@@ -10,18 +10,43 @@
 
 # Governance
 
-This repository contains governance-related work for Nebari, including:
+This repository holds the governance for the **Nebari Kubernetes Platform**: a stable infrastructure core plus a set of independently developed software packs, each in its own repository.
 
-⚖️ The complete [Nebari Code of Conduct](CODE_OF_CONDUCT.md)
+Authority is federated to match that shape.
+Pack maintainers own their repositories, and a small Core team owns the seams between them: the platform contract, the shared conventions, the security baseline, the official designation, and the trademark.
 
-🚀 Official [project roadmap](roadmap.md)
+## Start here
 
-📈 Details about [documentation analytics](analytics.md)
+⚖️ [Governance](GOVERNANCE.md) - stewardship, scope, teams and roles, how decisions get made, and how to change any of it
 
-💬 Issues that are [requests for discussions](https://github.com/nebari-dev/governance/issues?q=is%3Aissue+is%3Aopen+label%3A%22needs%3A+discussion+%F0%9F%92%AC%22+)
+📦 [Software pack policy](pack-policy.md) - official and community packs, pack maturity, and the `NebariApp` contract
 
-Some governance processes are in the documentation:
+📋 [Repository standards](repository-standards.md) - licensing, branch protection, required files, and shared conventions
 
-🤝 [Team structure and roles](https://www.nebari.dev/community/team-structure)
+™️ [Trademark and naming](trademark-and-naming.md) - how the Nebari name may be used
 
-🗳️ [Decision making processes](https://www.nebari.dev/community/decision-making)
+## Also here
+
+🤝 [Code of Conduct](CODE_OF_CONDUCT.md) - the complete Code of Conduct, and how to report an incident
+
+🚀 [Platform roadmap](roadmap.md) - cross-cutting direction only. Detailed roadmaps live in each repository
+
+📈 [Documentation analytics](analytics.md) - what is measured on the documentation site, and who can see it
+
+💬 [Requests for Discussion](https://github.com/nebari-dev/governance/issues?q=is%3Aissue+is%3Aopen+label%3A%22type%3A+RFD+%F0%9F%97%B3%22) - open RFD issues
+
+## Elsewhere
+
+Some governance material lives outside this repository, next to the thing it describes:
+
+| What | Where |
+| ---- | ----- |
+| Team membership requirements, and the step-by-step decision process | [nebari.dev/community/team-structure](https://www.nebari.dev/community/team-structure) and [nebari.dev/community/decision-making](https://www.nebari.dev/community/decision-making) |
+| The `NebariApp` Pack Specification | [`nebari-operator`](https://github.com/nebari-dev/nebari-operator) |
+| The pack release readiness checklist and metadata schema | [`software-pack-template`](https://github.com/nebari-dev/software-pack-template) and [`software-pack-dashboard`](https://github.com/nebari-dev/software-pack-dashboard) |
+| Contribution guidelines | [nebari.dev/community](https://nebari.dev/docs/community) |
+
+## Changing anything in this repository
+
+Everything here is changed through the [platform RFD process](GOVERNANCE.md#platform-rfds): open an RFD issue, let it be discussed, and have Core decide it.
+A pull request against these documents should reference the RFD that authorized it.

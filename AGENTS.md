@@ -4,7 +4,7 @@ Guidance for coding agents working in this repository.
 
 ## What this repository is
 
-`nebari-dev/governance` holds the Nebari project's governance artifacts: the Code of Conduct, the public roadmap, and the documentation analytics policy.
+`nebari-dev/governance` holds the governance for the Nebari Kubernetes Platform: the governance document itself, the software pack policy, the repository standards, the trademark and naming policy, the Code of Conduct, the platform roadmap, and the documentation analytics policy.
 
 It is documentation only.
 There is no application code, no dependency manifest, no build, no test suite, no linter, and no CI workflow.
@@ -15,41 +15,69 @@ Two things follow from that:
 - There are no build, lint, or test commands to run, and adding tooling for them is not a side effect of a content change.
 - Verification means reading the diff for factual accuracy and confirming that relative links still resolve. See [checking your work](#checking-your-work).
 
+## The one rule that is easy to get wrong
+
+**Everything in this repository is normative, and changing it requires an accepted RFD.**
+
+These documents are not descriptions that can be tidied up to match reality. They are the policy that reality is measured against. A wording change to `GOVERNANCE.md`, `pack-policy.md`, `repository-standards.md`, or `trademark-and-naming.md` is a governance change, even when it looks editorial.
+
+So before changing any of them, find the RFD that authorizes it, and reference that RFD in the pull request.
+If there is no RFD, the change is either a genuine typo fix or it is out of scope, and it is worth asking which.
+
+Fixing a broken link, a typo, or a stale cross-reference does not need an RFD.
+Rewording a requirement does, including turning a "should" into a "must".
+
 ## Structure, and why it is shaped this way
+
+### Policy is split by topic, and cross-references are load-bearing
+
+| File | Holds |
+| ---- | ----- |
+| `GOVERNANCE.md` | Stewardship, scope, teams and roles, the two decision lanes, the RFD lifecycle, the amendment clause |
+| `pack-policy.md` | Official and community tiers, pack maturity, the `NebariApp` contract |
+| `repository-standards.md` | Licensing, branch protection, required files, docs layout, shared conventions, enforcement |
+| `trademark-and-naming.md` | Use of the Nebari name and brand |
+| `CODE_OF_CONDUCT.md` | Entry point for the Code of Conduct, which is split further (below) |
+| `roadmap.md` | Cross-cutting platform direction only |
+
+These files link to each other by anchor, and the anchors carry meaning: `pack-policy.md` points at `repository-standards.md#shared-conventions`, several files point at `GOVERNANCE.md#platform-rfds`, and `README.md` points at most of them.
+Renaming a heading silently breaks those links, so grep for the old anchor before renaming one.
+
+### Authority lives next to what it governs, deliberately
+
+Much of the material these documents refer to is intentionally **not** here, and moving it here would be a governance change rather than a cleanup:
+
+- **Team membership requirements and the step-by-step decision process** live on the website, at `nebari.dev/community/team-structure` and `nebari.dev/community/decision-making`.
+- **The `NebariApp` Pack Specification** lives with `nebari-operator`, so the contract and the code that enforces it version together.
+- **The pack release readiness checklist** lives in `software-pack-template`, and the `pack-metadata.yaml` schema in `software-pack-dashboard`.
+
+When a document here describes one of those, it should point at it rather than restate it.
+If you find this repository and one of those sources disagreeing, the source next to the implementation usually wins, and the drift is worth reporting rather than silently patching.
+
+Note that the real repository names are unprefixed: `software-pack-template`, `mlflow-pack`, `data-science-pack`. Only the platform components carry a `nebari-` prefix, as in `nebari-operator`.
 
 ### The Code of Conduct is one document split across five files
 
 `CODE_OF_CONDUCT.md` at the root is the entry point.
-It states the commitment, names the reporting route, and links to the four parts under `code-of-conduct/`.
-
-| File | Holds |
-| ---- | ----- |
-| `code-of-conduct/coc_details.md` | Expected and unacceptable behavior |
-| `code-of-conduct/coc_diversity_statement.md` | Diversity statement |
-| `code-of-conduct/coc_reporting.md` | How to report an incident |
-| `code-of-conduct/coc_enforcement.md` | Committee membership and the enforcement manual |
+It states the commitment and the scope, names the reporting route, and links to the four parts under `code-of-conduct/`.
 
 Substantive changes belong in the relevant part file rather than in the root summary.
-The root file and the parts cross-link with relative paths, and several of those links carry anchors, most often `coc_enforcement.md#the-code-of-conduct-committee`.
-Renaming a heading in a part file silently breaks the anchors pointing at it from the other files, so grep for the old heading text before renaming one.
+The scope paragraph is duplicated in `CODE_OF_CONDUCT.md` and `code-of-conduct/coc_details.md`, so a change to scope has to touch both.
 
 The committee names and email addresses in `coc_enforcement.md` are live reporting contacts, and `CODE_OF_CONDUCT.md`, `coc_details.md`, and `coc_reporting.md` all link to that section.
 Change them only on explicit instruction, and update every reference in the same change.
 
-### Roadmaps are append-only history
+### The roadmap is thin on purpose, and the old ones are frozen
 
-`roadmap.md` is the stable entry point.
-It carries the project values, the annotation legend, and a Documents list linking to one file per year under `roadmaps/`.
+`roadmap.md` covers only cross-cutting platform direction.
+Detailed roadmaps live in each pack's own repository, so resist the pull to make this file comprehensive.
 
-The per-year files are a record, not a live board.
-`roadmaps/roadmap_2023.md` says it continues the 2022 themes, links back to them, and carries forward the items that were still unfinished.
-So:
+`roadmaps/roadmap_2022.md` and `roadmaps/roadmap_2023.md` covered Nebari Classic, the previous monolithic architecture.
+They are archived, carry a banner saying so, and are not maintained.
+Do not update their status marks, and do not migrate their content forward.
 
-- Update the current year's file. Leave earlier years as they were written, even where an item has since moved on.
-- Starting a new year means adding `roadmaps/roadmap_<year>.md` plus a link to it from the Documents list in `roadmap.md`.
-
-Status marks are shared vocabulary, not decoration.
-The legend in `roadmap.md` defines 🗃 (not started), 📬 (scoped), 🏗 (ongoing), ✅ (complete), ⛔️ (blocked), and 🔮 (stretch goal), and the same marks are used on the project boards.
+The status marks are shared vocabulary, not decoration.
+The legend in `roadmap.md` defines 🗃 (not started), 📬 (scoped), 🏗 (ongoing), ✅ (complete), ⛔️ (blocked), and 🔮 (stretch goal), and the same marks are used on the project boards and in per-repository roadmaps.
 Reuse them exactly, and do not introduce new ones.
 
 ### Some files here are copies, and local edits to them get overwritten
@@ -60,11 +88,8 @@ Run `git log -- <path>` on any of them and you will see nothing but sync commits
 Editing those files here is lost on the next sync.
 Send the change to `nebari-dev/.github` instead.
 
-### Governance is documented in two places
-
-Some processes live on the documentation site rather than in this repository, and the README links to them: [team structure and roles](https://www.nebari.dev/community/team-structure) and [decision making processes](https://www.nebari.dev/community/decision-making).
-
-Before adding a process document here, check whether the site already covers it, and prefer a link over a restatement that can drift.
+This bites in a specific place: the RFD issue template's status values are governed by the [RFD lifecycle](GOVERNANCE.md#rfd-lifecycle) in this repository, but the template itself can only be changed upstream.
+Reconciling the two means a policy change here and a template change there.
 
 ### Issues here are for discussion, not for bugs
 
@@ -73,12 +98,11 @@ The trackers are separate:
 
 - Nebari bugs and feature requests: `nebari-dev/nebari`
 - Documentation issues: `nebari-dev/nebari-docs`
-- Governance discussion: this repository, labelled `needs: discussion 💬`
+- Governance discussion and RFDs: this repository
 
-Decisions are made through Request for Discussion issues, opened from `.github/ISSUE_TEMPLATE/RFD.md`.
-An RFD is a GitHub issue with a status table at the top, not a file committed here.
-That table has its own status vocabulary, separate from the roadmap legend: Draft 🚧, Open for comments 💬, Accepted ✅, Implemented 🚀, Obsolete 🗃, Rejected ⛔️.
-Dates in it use `dd-MM-YYYY`.
+An RFD is a GitHub issue, not a file committed here.
+Its status vocabulary and the label that goes with each status are defined in `GOVERNANCE.md`, and that table is the authority when anything disagrees.
+Dates in an RFD's status table are day-first, as `dd-MM-YYYY`.
 
 ## Writing conventions
 
@@ -86,6 +110,7 @@ Match the file you are editing. Across the repository:
 
 - **One sentence per line.** Prose is not wrapped at a fixed column; each sentence gets its own line so diffs stay readable. Do not reflow paragraphs you are not otherwise changing, because it turns a one-line edit into a whole-paragraph diff.
 - **Links are inline**, except in `CONTRIBUTING.md`, which collects reference-style definitions at the bottom under a `<!-- Links -->` comment.
+- **Policy prose is plain and direct.** These documents state what is required, what is recommended, and what does not exist yet. Keep those three distinct, and prefer admitting a gap to papering over it.
 - **The accessibility rules are a review gate**, not advice. The pull request template makes contributors confirm them, so write to them the first time:
   - plain language
   - exactly one level-one heading per file
@@ -102,7 +127,7 @@ Work on a branch and open a pull request.
 The core team can bypass the review requirement, so being able to merge your own change does not mean you should.
 
 The pull request body comes from `.github/PULL_REQUEST_TEMPLATE.md`.
-Fill in the reference issue, tick the change type, and complete the access-centered content checklist.
+Fill in the reference issue, which for a policy change is the authorizing RFD, tick the change type, and complete the access-centered content checklist.
 For a content-only change the testing boxes do not apply, so say that explicitly rather than leaving them ambiguous.
 
 ### Checking your work
@@ -119,7 +144,8 @@ grep -rnoE '\]\([^)#][^)]*\.md[^)]*\)' --include='*.md' . \
     done
 ```
 
-Breaks reported in files you did not touch are pre-existing; fix them in their own change rather than folding them into an unrelated one.
+It should report nothing.
+Breaks in files you did not touch are worth fixing, since there is no CI to catch them.
 
 That command does not check anchors, only paths.
 If you renamed a heading, grep for the old anchor text yourself.
