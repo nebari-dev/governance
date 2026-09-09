@@ -82,14 +82,28 @@ Reuse them exactly, and do not introduce new ones.
 
 ### Some files here are copies, and local edits to them get overwritten
 
-`CONTRIBUTING.md`, `.github/PULL_REQUEST_TEMPLATE.md`, and everything under `.github/ISSUE_TEMPLATE/` are pushed into this repository by a sync bot from `nebari-dev/.github`.
+A sync bot pushes several files into this repository from `nebari-dev/.github`.
+Editing them here is lost on the next sync, so the change belongs upstream instead.
+`.github/sync.yml` in that repository is the authority for what is synced where; as of this writing it covers:
+
+| File here | Notes |
+| --------- | ----- |
+| `LICENSE` | Also synced to six other repositories from the same source |
+| `CONTRIBUTING.md` | Shared across the same group |
+| `.github/PULL_REQUEST_TEMPLATE.md` | Shared across the same group |
+| `.github/ISSUE_TEMPLATE/*` | Shared, except `RFD.md`, which has its own rule targeting only this repository |
+
 Run `git log -- <path>` on any of them and you will see nothing but sync commits.
 
-Editing those files here is lost on the next sync.
-Send the change to `nebari-dev/.github` instead.
+Two places where this bites:
 
-This bites in a specific place: the RFD issue template's status values are governed by the [RFD lifecycle](GOVERNANCE.md#rfd-lifecycle) in this repository, but the template itself can only be changed upstream.
-Reconciling the two means a policy change here and a template change there.
+- **The RFD issue template.** Its status values are governed by the [RFD lifecycle](GOVERNANCE.md#rfd-lifecycle) here, but the template itself can only be changed upstream. Reconciling the two means a policy change here and a template change there.
+- **`LICENSE`.** Changing it here alone does not stick, and changing it upstream relicenses every repository in that sync group at once. Treat it as an organization-wide action, not a repository-local one.
+
+`CODE_OF_CONDUCT.md` is the reverse case, and worth knowing about.
+It is **not** synced into this repository, so the copy here is editable and is the canonical one.
+But `nebari-dev/.github` holds its own copy that is pushed to the other repositories, so a change made here does not reach them.
+Keeping the two aligned is a manual step.
 
 ### Issues here are for discussion, not for bugs
 
