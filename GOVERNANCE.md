@@ -86,8 +86,9 @@ A proposal is accepted when more than half of Core votes yes.
 
 The mechanics are spelled out here so that anyone can reproduce a tally from the issue itself, months later, without asking who counted what:
 
-- **A yes vote** is a 👍 or ❤️ reaction on the issue from a Core member. Both count.
+- **A yes vote** is a 👍 or ❤️ reaction on the issue from a Core member. Both count, and each person counts once however many reactions they leave.
 - **👀 is not a vote.** Neither is any other reaction.
+- **"More than half" is strict.** With ten Core members it takes six votes, not five. Five is a tie.
 - **The denominator** is the human membership of the [`core-team`](https://github.com/orgs/nebari-dev/teams/core-team) GitHub team. Bot accounts in that team, such as `nebari-sensei`, are excluded from it. That team is the authoritative record of who Core is, so it needs to be accurate.
 - **Where a decision is taken synchronously**, in a meeting rather than by reaction, the outcome is recorded as a comment on the issue naming the date and who was present. An unrecorded meeting decision cannot be audited later, and is treated as not yet decided.
 
