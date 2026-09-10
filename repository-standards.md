@@ -3,7 +3,13 @@
 Every public repository in the [`nebari-dev`](https://github.com/nebari-dev) organization meets the standards below.
 
 The point is that nobody re-decides the basics per repository.
-These defaults are delivered through the [software pack template](https://github.com/nebari-dev/software-pack-template), so a new repository starts compliant instead of being brought into line later.
+
+How a repository comes to meet them depends on what it is:
+
+- **New packs inherit them.** The [software pack template](https://github.com/nebari-dev/software-pack-template) carries the defaults, so a new pack starts compliant instead of being brought into line later.
+- **Everything else has them applied directly.** There is no non-pack template repository, so a repository like this one gets the required files seeded into it and is held to the standard by [enforcement](#how-this-is-enforced-and-where-enforcement-stops) rather than by inheritance.
+
+That asymmetry is worth being explicit about, because the standards apply to every public repository in the organization while only one kind of repository inherits them automatically.
 
 ## Licensing
 
@@ -81,6 +87,8 @@ This section is deliberately honest about the limits, because a standard that cl
 
 Nothing here can verify that a `README.md` is *useful* or that a `SECURITY.md` describes a process anyone follows.
 That is what review is for.
+
+**Open question: whether to stand up a non-pack template repository.** Today the inheritance path only exists for packs, so every other repository depends on the enforcement layers above plus a one-time seeding of the required files. A second template would close that gap for new non-pack repositories, at the cost of another repository to maintain. Raised by @viniciusdc on the RFD and not settled by it.
 
 ## Changing these standards
 
