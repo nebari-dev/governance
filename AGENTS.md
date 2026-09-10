@@ -88,7 +88,7 @@ Editing them here is lost on the next sync, so the change belongs upstream inste
 
 | File here | Notes |
 | --------- | ----- |
-| `LICENSE` | Also synced to six other repositories from the same source |
+| `LICENSE` | Synced today, which means one edit upstream relicenses seven repositories at once. [nebari-dev/.github#50](https://github.com/nebari-dev/.github/pull/50) removes it from the sync so each repository owns its own license |
 | `CONTRIBUTING.md` | Shared across the same group |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Shared across the same group |
 | `.github/ISSUE_TEMPLATE/*` | Shared, except `RFD.md`, which has its own rule targeting only this repository |
@@ -98,7 +98,7 @@ Run `git log -- <path>` on any of them and you will see nothing but sync commits
 Two places where this bites:
 
 - **The RFD issue template.** Its status values are governed by the [RFD lifecycle](GOVERNANCE.md#rfd-lifecycle) here, but the template itself can only be changed upstream. Reconciling the two means a policy change here and a template change there.
-- **`LICENSE`.** Changing it here alone does not stick, and changing it upstream relicenses every repository in that sync group at once. Treat it as an organization-wide action, not a repository-local one.
+- **`LICENSE`.** While it is still synced, changing it here alone does not stick, and changing it upstream relicenses every repository in the sync group at once. Once [nebari-dev/.github#50](https://github.com/nebari-dev/.github/pull/50) merges, this file is repository-local and the entry above goes away.
 
 `CODE_OF_CONDUCT.md` is the reverse case, and worth knowing about.
 It is **not** synced into this repository, so the copy here is editable and is the canonical one.
