@@ -1,5 +1,11 @@
 # Roadmap - 2022
 
+> **Archived.** This roadmap covered Nebari Classic, the single monolithic platform
+> shipped from one repository. That architecture has been replaced by the Nebari
+> Kubernetes Platform, so this document is kept as history and is not maintained.
+> See the [current platform roadmap](../roadmap.md) for cross-cutting direction, and a
+> pack's own repository for its detailed plans.
+
 ## Table of contents
 
 - [Roadmap - 2022](#roadmap---2022)

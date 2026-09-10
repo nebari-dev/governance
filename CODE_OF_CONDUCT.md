@@ -11,9 +11,10 @@ We are particularly motivated to support new and/or anxious collaborators, peopl
 
 To make clear what is expected, we ask all members of the community to conform to this Code of Conduct.
 
-This Code of Conduct applies to all spaces managed by Nebari including, but not limited to, in-person and online focus groups and workshops, and communications online via GitHub.
+This Code of Conduct applies to all spaces managed by the `nebari-dev` organization, including but not limited to its repositories and issue trackers, in-person and online focus groups and workshops, community calls, and communications online via GitHub.
+Software packs maintained outside the organization are not covered by it. We offer this Code of Conduct as a recommended default for anyone building on Nebari, rather than imposing it downstream.
 
-The [Nebari Code of Conduct committee](./coc_enforcement.md#the-code-of-conduct-committee) is responsible for enforcing the Code of Conduct.
+The [Nebari Code of Conduct committee](code-of-conduct/coc_enforcement.md#the-code-of-conduct-committee) is responsible for enforcing the Code of Conduct.
 A Code of Conduct incident report can be filed using this [Google Form](https://forms.gle/PFHmsMUiu12qJwWV7_).
 
 Reports will be reviewed by members of this committee, unless there is a conflict of interest, and will be kept confidential.

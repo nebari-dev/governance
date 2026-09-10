@@ -1,10 +1,16 @@
 # Roadmap - 2023
 
+> **Archived.** This roadmap covered Nebari Classic, the single monolithic platform
+> shipped from one repository. That architecture has been replaced by the Nebari
+> Kubernetes Platform, so this document is kept as history and is not maintained.
+> See the [current platform roadmap](../roadmap.md) for cross-cutting direction, and a
+> pack's own repository for its detailed plans.
+
 ## Table of contents
 
 - [Roadmap - 2023](#roadmap---2023)
   - [Table of contents](#table-of-contents)
-  - [Themes for 2023](#themes-for-2022)
+  - [Themes for 2023](#themes-for-2023)
     - [Engineering](#engineering)
     - [User experience](#user-experience)
     - [Performance and stability](#performance-and-stability)
@@ -105,7 +111,7 @@ We carried the unfinished tasks and added some new ones.
   - 🔮 - Grafana dashboards improvements
 - 🔮 - Security explorations
   - 🔮 - Adopt [Kubescape](https://github.com/armosec/kubescape)
-- 🔮 - Evaluate the use of (dagger)[https://dagger.io/blog/public-launch-announcement](https://dagger.io/blog/public-launch-announcement)
+- 🔮 - Evaluate the use of [dagger](https://dagger.io/blog/public-launch-announcement)
 - 🔮 - Expand test suite
   - 📬 - Verify stability of (Jupyter) extensions
   - 🔮 - Explore testing Nebari integrations
